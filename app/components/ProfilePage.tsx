@@ -2,6 +2,7 @@
 
 import { useAuth } from '../contexts/AuthContext';
 import Link from 'next/link';
+import Dashboard from './Dashboard';
 
 export default function ProfilePage() {
   const { user, logout } = useAuth();
@@ -55,7 +56,7 @@ export default function ProfilePage() {
       </header>
 
       {/* Main Content */}
-      <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         {/* Profile Header */}
         <div className="mb-8 rounded-2xl bg-white p-8 shadow-lg">
           <div className="flex flex-col items-center sm:flex-row sm:items-start gap-6">
@@ -96,6 +97,15 @@ export default function ProfilePage() {
               <p className="text-xs text-gray-600 mt-1">{stat.label}</p>
             </div>
           ))}
+        </div>
+
+        {/* Dashboard Section */}
+        <div className="mb-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Financial Dashboard</h2>
+            <p className="text-gray-600 mt-1">Comprehensive overview of your financial metrics and trends</p>
+          </div>
+          <Dashboard />
         </div>
 
         {/* Settings Section */}
