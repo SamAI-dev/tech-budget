@@ -2,6 +2,7 @@
 
 import { useAuth } from '../contexts/AuthContext';
 import Link from 'next/link';
+import Dashboard from './Dashboard';
 
 export default function ProfilePage() {
   const { user, logout } = useAuth();
@@ -27,10 +28,8 @@ export default function ProfilePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <Link href="/landing" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600">
-                <svg
-                  className="h-6 w-6 text-white"
-                  fill="none"
+              <div className="flex h-flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600            <svg
+                  className="h-6 w-6size-6 text-white             fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -44,27 +43,39 @@ export default function ProfilePage() {
               </div>
               <span className="text-xl font-bold text-gray-900">Tech Budget</span>
             </Link>
-            <button
-              onClick={logout}
-              className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors"
-            >
-              Logout
-            </button>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/blog"
+                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/landing"
+                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                Dashboard
+              </Link>
+              <button
+                onClick={logout}
+                className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors"
+              >
+                Logout
+              </button>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         {/* Profile Header */}
         <div className="mb-8 rounded-2xl bg-white p-8 shadow-lg">
           <div className="flex flex-col items-center sm:flex-row sm:items-start gap-6">
             <div className="relative">
-              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-3xl font-bold text-white shadow-lg">
-                {user?.name?.charAt(0).toUpperCase() || 'U'}
+              <div className="flex h-flex size-24 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-3xl font-bold text-white shadow-lg            {user?.name?.charAt(0).toUpperCase() || 'U'}
               </div>
-              <button className="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-full bg-white border-2 border-gray-200 shadow-md hover:bg-gray-50 transition-colors">
-                <svg className="h-4 w-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="absolutabsolute bottom-0 right-0 flex size-8 items-center justify-center rounded-full bg-white border-2 border-gray-200 shadow-md hover:bg-gray-50 transition-colors            <svg className="h-4 w-4size-4 text-gray-600"none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                 </svg>
               </button>
@@ -98,6 +109,15 @@ export default function ProfilePage() {
           ))}
         </div>
 
+        {/* Dashboard Section */}
+        <div className="mb-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Financial Dashboard</h2>
+            <p className="text-gray-600 mt-1">Comprehensive overview of your financial metrics and trends</p>
+          </div>
+          <Dashboard />
+        </div>
+
         {/* Settings Section */}
         <div className="rounded-2xl bg-white p-6 shadow-lg">
           <h2 className="text-xl font-bold text-gray-900 mb-6">Settings</h2>
@@ -114,8 +134,7 @@ export default function ProfilePage() {
                     <p className="text-sm text-gray-600">{setting.description}</p>
                   </div>
                   <svg
-                    className="h-5 w-5 text-gray-400"
-                    fill="none"
+                    className="h-5 w-5size-5 text-gray-400               fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >

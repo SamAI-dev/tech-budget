@@ -46,6 +46,12 @@ export default function LandingPage() {
             </div>
             <div className="flex items-center gap-4">
               <Link
+                href="/blog"
+                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
                 href="/profile"
                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
               >

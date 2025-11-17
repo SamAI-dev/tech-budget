@@ -23,9 +23,9 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
       <div className="flex flex-col items-center gap-6">
         <div className="relative">
           <div className="absolute inset-0 animate-ping rounded-full bg-white opacity-20"></div>
-          <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md">
+          <div className="relative flex size-24 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md">
             <svg
-              className="h-12 w-12 text-white"
+              className="size-12 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
         </div>
         <div className="mt-4">
           <div className="h-1 w-32 overflow-hidden rounded-full bg-white/20">
-            <div className="h-full w-full bg-white" style={{ animation: 'loading 2s ease-in-out infinite' }}></div>
+            <div className="size-full bg-white" style={{ animation: 'loading 2s ease-in-out infinite' }}></div>
           </div>
         </div>
       </div>
