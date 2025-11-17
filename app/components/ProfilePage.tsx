@@ -28,10 +28,8 @@ export default function ProfilePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <Link href="/landing" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600">
-                <svg
-                  className="h-6 w-6 text-white"
-                  fill="none"
+              <div className="flex h-flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600            <svg
+                  className="h-6 w-6size-6 text-white             fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -75,11 +73,9 @@ export default function ProfilePage() {
         <div className="mb-8 rounded-2xl bg-white p-8 shadow-lg">
           <div className="flex flex-col items-center sm:flex-row sm:items-start gap-6">
             <div className="relative">
-              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-3xl font-bold text-white shadow-lg">
-                {user?.name?.charAt(0).toUpperCase() || 'U'}
+              <div className="flex h-flex size-24 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-3xl font-bold text-white shadow-lg            {user?.name?.charAt(0).toUpperCase() || 'U'}
               </div>
-              <button className="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-full bg-white border-2 border-gray-200 shadow-md hover:bg-gray-50 transition-colors">
-                <svg className="h-4 w-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="absolutabsolute bottom-0 right-0 flex size-8 items-center justify-center rounded-full bg-white border-2 border-gray-200 shadow-md hover:bg-gray-50 transition-colors            <svg className="h-4 w-4size-4 text-gray-600"none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                 </svg>
               </button>
@@ -138,8 +134,7 @@ export default function ProfilePage() {
                     <p className="text-sm text-gray-600">{setting.description}</p>
                   </div>
                   <svg
-                    className="h-5 w-5 text-gray-400"
-                    fill="none"
+                    className="h-5 w-5size-5 text-gray-400               fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >

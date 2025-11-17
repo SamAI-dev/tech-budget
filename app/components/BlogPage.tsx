@@ -108,10 +108,8 @@ export default function BlogPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <Link href="/landing" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600">
-                <svg
-                  className="h-6 w-6 text-white"
-                  fill="none"
+              <div className="flex hflex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600             <svg
+                  className="h-6 w-size-6 text-white              fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -136,7 +134,7 @@ export default function BlogPage() {
                 href="/profile"
                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
               >
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="h-5 w-size-5="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 {user?.name}
@@ -205,8 +203,7 @@ export default function BlogPage() {
                   className="group rounded-2xl bg-white p-6 shadow-lg transition-all hover:shadow-xl hover:scale-[1.02]"
                 >
                   <div className="mb-4 flex items-center gap-3">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 text-3xl">
-                      {post.image}
+                    <div className="flex hflex size-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 text-3xl                   {post.image}
                     </div>
                     <div className="flex-1">
                       <span className="inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
