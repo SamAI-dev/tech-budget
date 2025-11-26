@@ -18,15 +18,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-// Fixed by Agent: Move static data to a separate file
-import {
-  COLORS,
-  spendingData,
-  categoryData,
-  budgetData,
-  monthlyComparison,
-  metrics,
-} from './dashboardData';
+import { COLORS, spendingData, categoryData, budgetData, monthlyComparison, metrics } from './dashboardData';
 
 export default function Dashboard() {
   return (
