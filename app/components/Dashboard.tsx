@@ -18,89 +18,17 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const COLORS = ['#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981', '#ef4444'];
-
-const spendingData = [
-  { month: 'Jan', amount: 3200, budget: 3500 },
-  { month: 'Feb', amount: 2800, budget: 3500 },
-  { month: 'Mar', amount: 3500, budget: 3500 },
-  { month: 'Apr', amount: 3100, budget: 3500 },
-  { month: 'May', amount: 2900, budget: 3500 },
-  { month: 'Jun', amount: 3300, budget: 3500 },
-];
-
-const categoryData = [
-  { name: 'Food & Dining', amount: 1200, percentage: 28 },
-  { name: 'Shopping', amount: 900, percentage: 21 },
-  { name: 'Transportation', amount: 650, percentage: 15 },
-  { name: 'Bills & Utilities', amount: 800, percentage: 19 },
-  { name: 'Entertainment', amount: 450, percentage: 10 },
-  { name: 'Other', amount: 300, percentage: 7 },
-];
-
-const budgetData = [
-  { name: 'Needs', value: 2500, color: '#3b82f6' },
-  { name: 'Wants', value: 1200, color: '#8b5cf6' },
-  { name: 'Savings', value: 800, color: '#10b981' },
-];
-
-const monthlyComparison = [
-  { month: 'Jan', income: 5000, expenses: 3200 },
-  { month: 'Feb', income: 5000, expenses: 2800 },
-  { month: 'Mar', income: 5500, expenses: 3500 },
-  { month: 'Apr', income: 5000, expenses: 3100 },
-  { month: 'May', income: 5200, expenses: 2900 },
-  { month: 'Jun', income: 5500, expenses: 3300 },
-];
+// Fixed by Agent: Move static data to a separate file
+import {
+  COLORS,
+  spendingData,
+  categoryData,
+  budgetData,
+  monthlyComparison,
+  metrics,
+} from './dashboardData';
 
 export default function Dashboard() {
-  const metrics = [
-    {
-      title: 'Total Income',
-      value: '$31,200',
-      change: '+12.5%',
-      changeType: 'positive',
-      icon: (
-        <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Total Expenses',
-      value: '$18,800',
-      change: '-5.2%',
-      changeType: 'positive',
-      icon: (
-        <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Savings Rate',
-      value: '39.7%',
-      change: '+8.3%',
-      changeType: 'positive',
-      icon: (
-        <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Budget Remaining',
-      value: '$1,200',
-      change: '+15.0%',
-      changeType: 'positive',
-      icon: (
-        <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-    },
-  ];
-
   return (
     <div className="space-y-6">
       {/* Metrics Grid */}
@@ -305,4 +233,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
