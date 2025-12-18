@@ -11,7 +11,7 @@ def risky_execution(user_input):
 
 def hardcoded_secrets():
     
-    api_key = "12345-ABCDE-SECRET-KEY"
+    api_key = "AKIAIOSFODNN7HDHDU*&HDHD1HJ4"
     return api_key
 
 def weak_hashing(password):
