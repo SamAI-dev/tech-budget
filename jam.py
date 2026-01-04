@@ -16,4 +16,13 @@ def hardcoded_secrets():
 
 def weak_hashing(password):
     
-    return hashlib.md5(password.encode()).hexdigest()
+import bcrypt
+
+def secure_hashing(password):
+    # Generate salt and hash password
+    salt = bcrypt.gensalt(rounds=12)
+    hashed = bcrypt.hashpw(password.encode(), salt)
+    return hashed.decode()
+
+def verify_password(password, hashed):
+    return bcrypt.checkpw(password.encode(), hashed.encode())\n
