@@ -4,8 +4,15 @@ import hashlib
 
 def risky_execution(user_input):
     
-    eval(user_input)
-    
+import ast
+
+def safe_execution(user_input):
+    try:
+        # Only for literal expressions like dicts, lists, strings
+        result = ast.literal_eval(user_input)
+        return result
+    except (ValueError, SyntaxError):
+        raise ValueError('Invalid input format')\n    
     
     os.system("echo " + user_input)
 
